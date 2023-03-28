@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    document.body.innerHTML=`<div class="heading-container">
+        <h1>An Ice and Fire<h1>
+        
+        </div>
+        <div id="mainContainer" class="main-container"></div>`;
+        
+        const getData=async() => {
+            try{
+            const data=await fetch(https://anapioficeandfire.com/api/characters/583)
+            const books= await data.json()
+            mainContainer.innerHTML="";
+            books.forEach(book => {
+                displayData(book)
+                
+            });
+        }catch(error) {
+            console.log(error)
+        }
+        };
+        getData();
+        
+        
+        
+        const displayData=(obj)=> {
+            mainContainer.innerHTML+=`
+            <div class="container">
+            <h1 class="css1">Name:<span>${Junior Level Books introduction of computer}</span>, ISBN:<span> ${978-93-5019-561-1}</span></h1>
+            <h2 class="css2"> Authors:<span>${Amit Garg}</span></h2>
+            <h3 class="cs3"> Number of Pages:<span>${400}</span><h3>
+             
+            <h4 class="css5">Publisher Name:<span>${Reader's Zone}</span> , Release Date:<span>$ {12/07/2011}</span></h4>
+            <h4 class="css6">Characters${obj.characters}</span></h4>
+             </div>`
+
+             <div class="container">
+                <h1 class="css1">Name:<span>${Data Structure Using C}</span>, ISBN:<span> ${978-93-5163-389-1}</span></h1>
+                <h2 class="css2"> Authors:<span>${Sharad Kumar Verma}</span></h2>
+                <h3 class="cs3"> Number of Pages:<span>${200}</span><h3>
+                 
+                <h4 class="css5">Publisher Name:<span>${Thakur Publicaations Lucknow}</span> , Release Date:<span>${12/07/2015}</span></h4>
+                <h4 class="css6">Characters${obj.characters}</span></h4>
+                 </div>`
+
+                 <div class="container">
+                    <h1 class="css1">Name:<span>${Client Server Computing }</span>, ISBN:<span> ${978-93-8067-432-2}</span></h1>
+                    <h2 class="css2"> Authors:<span>${Lalit Kumar}</span></h2>
+                    <h3 class="cs3"> Number of Pages:<span>${250}</span><h3>
+                     
+                    <h4 class="css5">Publisher Name:<span>${Sun India Publications,New Delhi}</span> , Release Date:<span>${12/07/2012}</span></h4>
+                    <h4 class="css6">Characters${obj.characters}</span></h4>
+                     </div>`
+
+                     <div class="container">
+                        <h1 class="css1">Name:<span>${Client Server Computing}</span>, ISBN:<span> ${978-93-8067-432-2}</span></h1>
+                        <h2 class="css2"> Authors:<span>${Sharad Kumar Verma}</span></h2>
+                        <h3 class="cs3"> Number of Pages:<span>${512}</span><h3>
+                         
+                        <h4 class="css5">Publisher Name:<span>${Sun India Publicaations,New Delhi}</span> , Release Date:<span>${13/7/2012}</span></h4>
+                        <h4 class="css6">Characters${obj.characters}</span></h4>
+                         </div>` 
+                         
+                         <div class="container">
+                            <h1 class="css1">Name:<span>${CBOT}</span>, ISBN:<span> ${obj.isbn}</span></h1>
+                            <h2 class="css2"> Authors:<span>${Gunjan Verma}</span></h2>
+                            <h3 class="cs3"> Number of Pages:<span>${613}</span><h3>
+                             
+                            <h4 class="css5">Publisher Name:<span>${Thakur Publicaations}</span> , Release Date:<span>${17/7/2016}</span></h4>
+                            <h4 class="css6">Characters${obj.characters}</span></h4>
+                             </div>`
+            
+        
+</head>
+<body>
+    
+</body>
+</html>
